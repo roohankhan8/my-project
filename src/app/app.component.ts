@@ -9,6 +9,7 @@ import { Car } from './cars';
 export class AppComponent {
   prefix = "I'm Roohan";
   name = 'Roohan';
+  // username: string;
   colors: string[] = ['red', 'blue', 'green', 'purple'];
   subaru: Car = { make: 'Subaru', model: 'Outback', miles: 58232 };
   honda: Car = { make: 'Honda', model: 'Accord', miles: 39393 };
@@ -30,4 +31,6 @@ export class AppComponent {
   update() {
     this.phrase += ' ..and going';
   }
+  username: string = '';
+  constructor(){}
 }
