@@ -10,27 +10,41 @@
 
 <body>
   <div class="container">
+
     <div class="box">Hello, {{ name }} !</div>
-    <!-- <div *ngFor="let fruit of fruits; let i = index">
-      Fruit {{ i }} is {{ fruit }}
-    </div> -->
+
+    <div *ngFor="let color of colors; let i = index">
+      Color {{ i }} is {{ color }}
+    </div>
+
     <div *ngFor="let color of colors">{{ color }}<br /></div>
+
     <div *ngFor="let car of cars">
       {{ car.make }} {{ car.model }} with a mileage of {{ car.miles }}
     </div>
+
     <button (click)="saySomething()"> Say Something </button>
+
     <div class="number-display">
       {{counter}}
     </div>
+
     <button (click)="increment()"> increment </button>
     <div class="display">
       {{phrase}}
     </div>
     <button (click)="update()"> click me </button>
+
     <div class="display">
       {{username}}
     </div>
     <input [(ngModel)]="username" placeholder="enter a username">
+
+    <input [(ngModel)]="make" placeholder="make">
+    <input [(ngModel)]="model" placeholder="model">
+    <input type="number" [(ngModel)]="miles" placeholder="miles">
+    <button (click)="addCar()">add Car</button>
+    
   </div>
 </body>
 
